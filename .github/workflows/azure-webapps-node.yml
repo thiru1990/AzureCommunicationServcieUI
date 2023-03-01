@@ -46,8 +46,8 @@ jobs:
         # Build and test the project, then
         # deploy to Azure Web App.
         # npm prune --production
-        yarn install --network-timeout 1000000
-        yarn build --if-present
+        npm install 
+        npm build --if-present
         # npm run test --if-present
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v2
